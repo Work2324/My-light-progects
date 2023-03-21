@@ -1,0 +1,5 @@
+1.#include <fstream>
+2.ifstream-(команда)чтение fin("имя");
+  ofstream-(команда)запись fin("имя");
+ int, char (любая переменная)m;
+cout << m ...;

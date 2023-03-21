@@ -1,0 +1,47 @@
+#include <iostream>
+#include <fstream>
+//#include <windows.h>
+//#include <time.h>
+//#include <stdlib.h>
+//#include <conio>
+using namespace std;
+int main(){
+	ifstream fin;
+	fin.open("17.txt");
+	int n=0, t=0, r, y=0, o=0;
+	
+	
+	while(!fin.eof()){
+		fin >> t;
+		n++;
+	}
+	fin.close();
+	ifstream inf("17.txt");
+	int m[n];
+	while(!inf.eof()){
+		inf >> m[t];
+		t++;
+	}
+	t=0;
+	int l=10001;
+	for(int i=0;i<n;i++){
+		if(m[i]%2==0 and m[i]>t){
+			t=m[i];
+		}
+		if(m[i]%2==0 and m[i]<l){
+			l=m[i];
+		}
+	}
+	cout << t << endl <<  l << endl;
+
+	
+	
+	
+	
+	
+	
+	
+	
+	system ("pause");
+	return 0;
+}
